@@ -79,5 +79,5 @@ public class Bucketlists implements Serializable {
                 ", views=" + views +
                 '}';
     }
-
+ //
 }
