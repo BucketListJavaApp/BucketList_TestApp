@@ -41,10 +41,24 @@ public class Application {
             /* 설명. 조회: find, 추가: regist, 수정: modify, 삭제: remove */
             switch (input) {
                 case 1:
+                    System.out.println("모든 회원 정보를 불러옵니다!");
+                    System.out.println();
                     ms.findAllMembers();
                     break;
                 case 2:
-                    ms.findMembers();
+                    System.out.print("검색할 회원의 이름(1) 또는 번호를 입력하세요(2): ");
+//                    int category = sc.nextInt();
+//                    System.out.println();
+//                    String searchWord = sc.nextLine();
+//                    int selectMember = Integer.parseInt(sc.next());
+                    ms.findMemBy(selectMember);
+
+
+//                    int category = sc.nextInt();
+//                    System.out.println();
+//                    String searchWord = sc.nextLine();
+//                    ms.findMembers(category, searchWord);      // category (1) 이름으로 찾기, (2) 회원 번호로 찾기
+//                    System.out.println();
                     break;
                 case 3: break;
                 case 4: break;
@@ -56,13 +70,13 @@ public class Application {
                     System.out.println("잘못된 선택입니다.");
                     System.out.println();
             }
-
-
         }
-
-
-
-
-
     }
+
+    private static int selectMember() {
+
+        return ;
+    }
+
+
 }

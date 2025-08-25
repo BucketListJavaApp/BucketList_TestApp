@@ -26,12 +26,15 @@ public class MemberRepository {   // 여기 부분이 파일의 입출력을 관
             defaultmemberList.add(new Member(1, "user01", "pass01", "김민지",
                     20, Gender.WOMAN, "010-0000-0001", new String[]{"여행"},
                     new Date(System.currentTimeMillis()), AccountStatus.ACTIVATE));
+            defaultmemberList.add(new Member(2, "user02", "pass02", "이준호",
+                    21, Gender.MAN, "010-0000-0002", new String[]{"운동"},
+                    new Date(System.currentTimeMillis()), AccountStatus.ACTIVATE));
 
             saveMembers(defaultmemberList);
         }
 
         loadMembers();
-        
+
     }
 
     /* 설명. 회원을 축력하는 메소드로 덮어씌어주는 용도 */
@@ -75,4 +78,23 @@ public class MemberRepository {   // 여기 부분이 파일의 입출력을 관
         return memberList;
 
     }
+
+    public Member findMemByName(String memName) {
+        for (Member member : memberList) {
+            if (member.getName().equals(memName) && member.getAccountStatus() == AccountStatus.ACTIVATE) {
+                return member;
+            }
+        }
+        return null;
+    }
+
+    public Member findMemByNo(int memNo) {
+        for (Member member : memberList) {
+            if (member.getMemNo() == memNo && member.getAccountStatus() == AccountStatus.ACTIVATE) {
+                return member;
+            }
+        }
+        return null;
+    }
 }
+

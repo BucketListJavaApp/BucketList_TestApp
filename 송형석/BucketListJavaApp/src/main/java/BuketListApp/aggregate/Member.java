@@ -126,17 +126,15 @@ public class Member implements Serializable {     // Serializable 은 해줘서 
 
     @Override
     public String toString() {
-        return "Member{" +
-                "memNo=" + memNo +
-                ", id='" + id + '\'' +
-                ", pwd='" + pwd + '\'' +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", gen=" + gen +
-                ", phoneNum='" + phoneNum + '\'' +
-                ", buketList=" + Arrays.toString(buketList) +
-                ", registDate=" + registDate +
-                ", accountStatus=" + accountStatus +
-                '}';
+        return   memNo +
+                ", 이름= '" + name + '\'' +
+                ", Id= '" + id + '\'' +
+                ", pwd= '" + pwd + '\'' +
+                ", 나이= " + age +
+                ", 성별= " + gen +
+                ", 전화번호= '" + phoneNum + '\'' +
+                ", buketList= " + Arrays.toString(buketList) +
+                ", 등록일자= " + registDate +
+                ", 계정상태= " + accountStatus;
     }
 }
